@@ -4,33 +4,81 @@
 // Создай функции increment и decrement для увеличения и уменьшения значения счетчика
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
-const valueRef = document.querySelector("#value");
-const btnDecrement = document.querySelector(
-  "button[data-action = 'decrement']"
-);
-const btnincrement = document.querySelector(
-  "button[data-action = 'increment']"
-);
+
+
+const btnDecrement = document.querySelector("button[data-action='increment']");
+const btnIncrement = document.querySelector("button[data-action = 'decrement']");
+const btnValue = document.querySelector("#value");
+//console.log(btnIncrement, btnDecrement, btnValue);
 
 let counterValue = 0;
-function increment() {
+function incrementFunc() {
     counterValue += 1;
-    updateValue();
+    totalResult();
 };
- 
-function decrement() {
-     counterValue -= 1;
-   updateValue();
-};
-
-function updateValue() {
-    valueRef.textContent = counterValue;
+function decrimentFunc() {
+    counterValue -= 1;
+    totalResult();
 };
 
-btnDecrement.addEventListener("click", decrement);
+function totalResult() {
+     btnValue.textContent = counterValue;
+};
+btnDecrement.addEventListener("click", incrementFunc);
+btnIncrement.addEventListener("click", incrementFunc);
 
-btnincrement.addEventListener("click", increment);
 
-//console.log(btnDecrement);
-//console.log(btnincrement);
-//console.log(counterValue);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const valueRef = document.querySelector("#value");
+// const btnDecrement = document.querySelector(
+//   "button[data-action = 'decrement']"
+// );
+// const btnincrement = document.querySelector(
+//   "button[data-action = 'increment']"
+// );
+
+// let counterValue = 0; 
+// function increment() {
+//   counterValue += 1;
+//   updateValue();
+// }
+
+// function decrement() {
+//   counterValue -= 1;
+//   updateValue();
+// }
+
+// function updateValue() {
+//   valueRef.textContent = counterValue;
+// }
+
+// btnDecrement.addEventListener("click", decrement);
+
+// btnincrement.addEventListener("click", increment);
